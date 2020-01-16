@@ -15,7 +15,7 @@ class Search extends React.Component {
   }
  getDataUsingGet() {
     //GET request 
-    fetch('https://dev95064.service-now.com/api/now/v1/table/sys_user&sysparm_limit=10 ', {
+    fetch('https://dev95064.service-now.com/api/now/v1/table/sys_user', {
         method: 'GET',
         headers: {
           'Content-Type': "application/json",
@@ -28,7 +28,7 @@ class Search extends React.Component {
     .then((responseJson) => {
         //Success 
        //alert(JSON.stringify(responseJson.result));
-        console.log(JSON.stringify(responseJson.result));
+        console.log("list : "+JSON.stringify(responseJson.result));
         this.setState({data : responseJson.result})
     })
     //If response is not in json then in error
@@ -43,7 +43,7 @@ class Search extends React.Component {
     Alert.alert(item.name)
   }
   displayDetailForUser = (idUser) => {
-    console.log("Display film with id " + idUser)
+    console.log("Display user with id " + idUser)
     this.props.navigation.navigate("UserDetail", { idUser: idUser })
 }
   render() {

@@ -14,7 +14,7 @@ class UserDetail extends React.Component {
       }
       this.getDataUsingGet();
     }*/
-   getDataUsingGet() {
+  /* getDataUsingGet() {
       //GET request 
       fetch('https://dev95064.service-now.com/api/now/table/sys_user?sysparm_query=sys_id&sysparm_display_value='+this.props.navigation.state.params.idUser+'&sysparm_limit=1  ', {
           method: 'GET',
@@ -38,7 +38,7 @@ class UserDetail extends React.Component {
           alert(JSON.stringify(error));
           console.error(error);
       });
-    }
+    }*/
   render() {
     return (
       <View style={styles.main_container}>
